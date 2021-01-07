@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Sudoku</string>
+    <string name="app_name">Sudoku Puzzles</string>
     <string name="edit_sudoku">Sudoku szerkesztése</string>
 
     <string name="puzzle_folders">OpenSudoku feladvány mappák</string>

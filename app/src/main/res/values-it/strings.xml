@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OpenSudoku</string>
+    <string name="app_name">Sudoku Puzzles</string>
     <string name="edit_sudoku">Modifica sudoku</string>
 
     <string name="puzzle_folders">Cartelle rompicapo OpenSudoku</string>

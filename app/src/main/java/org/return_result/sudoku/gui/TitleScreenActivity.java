@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
@@ -26,8 +25,6 @@ import org.return_result.sudoku.game.SudokuGame;
 import org.return_result.sudoku.utils.AndroidUtils;
 
 public class TitleScreenActivity extends ThemedActivity {
-
-    private AdView mAdView;
 
     private final int MENU_ITEM_SETTINGS = 0;
     private final int MENU_ITEM_ABOUT = 1;
@@ -46,7 +43,7 @@ public class TitleScreenActivity extends ThemedActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

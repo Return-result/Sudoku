@@ -3,7 +3,7 @@
     <string name="app_name">Sudoku Puzzles</string>
     <string name="edit_sudoku">Edit sudoku</string>
 
-    <string name="puzzle_folders">Sudoku Puzzles folders</string>
+    <string name="puzzle_folders">OpenSudoku puzzle folders</string>
 
     <string name="version">Version %s</string>
     <string name="homepage" translatable="false">https://opensudoku.moire.org/</string>
@@ -315,70 +315,72 @@
     <string name="default_backgroundColorHighlighted_summary">Background color of the highlighted cells</string>
 
     <!-- Strings added/changed in 2.6.0 -->
-    <string name="solve_puzzle">Solve Puzzle</string>
-    <string name="solve_puzzle_confirm">Are you sure you want to see the solution?</string>
-    <string name="used_solver">You used the solver to see the solution!</string>
-    <string name="puzzle_not_solved">This puzzle has no solution.</string>
+    <string name="solve_puzzle" translatable="false">Solve Puzzle</string>
+    <string name="solve_puzzle_confirm" translatable="false">Are you sure you want to see the solution?</string>
+    <string name="used_solver" translatable="false">You used the solver to see the solution!</string>
+    <string name="puzzle_not_solved" translatable="false">This puzzle has no solution.</string>
 
-    <string name="solver_hint">Hint</string>
-    <string name="hint_confirm">This will fill in the correct value for the selected cell. Do you want to continue?</string>
-    <string name="cannot_give_hint">You cannot get a hint for that cell.</string>
+    <string name="solver_hint" translatable="false">Hint</string>
+    <string name="hint_confirm" translatable="false">This will fill in the correct value for the selected cell. Do you want to continue?</string>
+    <string name="cannot_give_hint" translatable="false">You cannot get a hint for that cell.</string>
 
-    <string name="check_solvabitily">Check Solvability</string>
-    <string name="puzzle_solvable">This puzzle has a solution.</string>
+    <string name="check_solvabitily" translatable="false">Check Solvability</string>
+    <string name="puzzle_solvable" translatable="false">This puzzle has a solution.</string>
 
-    <string name="copy_from_existing_theme">Copy from existing theme…</string>
+    <string name="copy_from_existing_theme" translatable="false">Copy from existing theme…</string>
 
     <!-- Strings added/changed in 3.0.0 -->
-    <string name="theme_default">Dark</string>
-    <string name="theme_amoled">AMOLED</string>
-    <string name="theme_latte">Caramel Latte</string>
-    <string name="theme_espresso">Espresso</string>
-    <string name="theme_sunrise">Sunrise</string>
-    <string name="theme_honeybee">Honey Bee</string>
-    <string name="theme_crystal">Crystal</string>
-    <string name="theme_midnight_blue">Midnight Blue</string>
-    <string name="theme_emerald">Emerald</string>
-    <string name="theme_forest">Forest</string>
-    <string name="theme_amethyst">Amethyst</string>
-    <string name="theme_ruby">Ruby</string>
+    <string name="theme_default" translatable="false">Dark</string>
+    <string name="theme_amoled" translatable="false">AMOLED</string>
+    <string name="theme_latte" translatable="false">Caramel Latte</string>
+    <string name="theme_espresso" translatable="false">Espresso</string>
+    <string name="theme_sunrise" translatable="false">Sunrise</string>
+    <string name="theme_honeybee" translatable="false">Honey Bee</string>
+    <string name="theme_crystal" translatable="false">Crystal</string>
+    <string name="theme_midnight_blue" translatable="false">Midnight Blue</string>
+    <string name="theme_emerald" translatable="false">Emerald</string>
+    <string name="theme_forest" translatable="false">Forest</string>
+    <string name="theme_amethyst" translatable="false">Amethyst</string>
+    <string name="theme_ruby" translatable="false">Ruby</string>
 
-    <string name="is_light_theme_title">Light theme</string>
-    <string name="is_light_theme_summary">Change if the app colors are based on the light or dark theme.</string>
-    <string name="app_color_primary_title">Primary App Color</string>
-    <string name="app_color_primary_summary">This color is used for the background of the title bar.</string>
-    <string name="app_color_secondary_title">Secondary App Color</string>
-    <string name="app_color_secondary_summary">This color is used for the Android status bar and is usually a darker version of the primary app color.</string>
-    <string name="app_color_accent_title">App Accent Color</string>
-    <string name="app_color_accent_summary">This color is used to accent various UI controls.</string>
-    <string name="app_color_button_title">App Button Color</string>
-    <string name="app_color_button_summary">This color is used for button UI controls.</string>
+    <string name="is_light_theme_title" translatable="false">Light theme</string>
+    <string name="is_light_theme_summary" translatable="false">Change if the app colors are based on the light or dark theme.</string>
+    <string name="app_color_primary_title" translatable="false">Primary App Color</string>
+    <string name="app_color_primary_summary" translatable="false">This color is used for the background of the title bar.</string>
+    <string name="app_color_secondary_title" translatable="false">Secondary App Color</string>
+    <string name="app_color_secondary_summary" translatable="false">This color is used for the Android status bar and is usually a darker version of the primary app color.</string>
+    <string name="app_color_accent_title" translatable="false">App Accent Color</string>
+    <string name="app_color_accent_summary" translatable="false">This color is used to accent various UI controls.</string>
+    <string name="app_color_button_title" translatable="false">App Button Color</string>
+    <string name="app_color_button_summary" translatable="false">This color is used for button UI controls.</string>
 
-    <string name="highlight_similar_notes">Highlight similar notes</string>
-    <string name="highlight_similar_notes_summary">Highlight cells with similar note values</string>
+    <string name="highlight_similar_notes" translatable="false">Highlight similar notes</string>
+    <string name="highlight_similar_notes_summary" translatable="false">Highlight cells with similar note values</string>
 
-    <string name="resume">Continue Playing</string>
-    <string name="sudoku_lists">List of Games</string>
+    <string name="resume" translatable="false">Resume</string>
+    <string name="sudoku_lists" translatable="false">Sudoku Lists</string>
 
     <!-- Strings added/changed in 3.1.0 -->
-    <string name="undo_to_before_mistake">Undo to before mistake</string>
-    <string name="undo_to_before_mistake_confirm">Are you sure you want to undo all actions since the last solvable state?</string>
+    <string name="undo_to_before_mistake" translatable="false">Undo to before mistake</string>
+    <string name="undo_to_before_mistake_confirm" translatable="false">Are you sure you want to undo all actions since the last solvable state?</string>
 
     <!-- Strings added/changed in 3.2.0 -->
-    <string name="remove_notes_title">Remove notes on number entry</string>
-    <string name="remove_notes_summary">Automatically remove notes from the same column, row, and box when entering a number</string>
+    <string name="remove_notes_title" translatable="false">Remove notes on number entry</string>
+    <string name="remove_notes_summary" translatable="false">Automatically remove notes from the same column, row, and box when entering a number</string>
 
-    <string name="create_from_single_color">Create from single color…</string>
+    <string name="create_from_single_color" translatable="false">Create from single color…</string>
 
     <!-- Strings added/changed in 3.3.0 -->
-    <string name="show_sudoku_lists_on_startup_title">Show sudoku lists on startup</string>
-    <string name="show_sudoku_lists_on_startup_summary">Show the sudoku lists on startup and skip the title screen.</string>
-    <string name="app_startup_category">App Startup</string>
+    <string name="show_sudoku_lists_on_startup_title" translatable="false">Show sudoku lists on startup</string>
+    <string name="show_sudoku_lists_on_startup_summary" translatable="false">Show the sudoku lists on startup and skip the title screen.</string>
+    <string name="app_startup_category" translatable="false">App Startup</string>
 
     <!-- Strings added/changed in 3.4.0 -->
-    <string name="sort">Sort</string>
-    <string name="sort_puzzles_by">Sort puzzles by</string>
-    <string name="sort_creation_date">Creation date</string>
-    <string name="sort_play_time">Play time</string>
-    <string name="sort_last_played">Last played</string>
+    <string name="sort" translatable="false">Sort</string>
+    <string name="sort_puzzles_by" translatable="false">Sort puzzles by</string>
+    <string name="sort_creation_date" translatable="false">Creation date</string>
+    <string name="sort_play_time" translatable="false">Play time</string>
+    <string name="sort_last_played" translatable="false">Last played</string>
+    <string name="sudoku_puzzle_game_developed_by" translatable="false">Sudoku Puzzle Game Developed By:</string>
+    <string name="return_result_org" translatable="false">Return Result Org.</string>
 </resources>

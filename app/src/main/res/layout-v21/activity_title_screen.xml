@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:layout_marginTop="30dp"
@@ -12,7 +13,8 @@
         android:layout_weight="1"
         android:id="@+id/imageV"
         android:layout_below="@id/settings_button"
-        app:srcCompat="@drawable/sudokuonetransparent" />
+        app:srcCompat="@drawable/sudokuonetransparent"
+        tools:ignore="ObsoleteLayoutParam" />
 
     <Button
         android:layout_width="30dp"

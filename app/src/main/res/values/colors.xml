@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="opensudoku_colorPrimaryLight">#D1FDF9</color>
-    <color name="opensudoku_colorPrimary">#499ef1</color>
-    <color name="opensudoku_colorPrimaryDark">#1c86ee</color>
-    <color name="opensudoku_colorAccent">#656565</color>
+    <color name="sudoku_colorPrimaryLight">#D1FDF9</color>
+    <color name="sudoku_colorPrimary">#499ef1</color>
+    <color name="sudoku_colorPrimaryDark">#1c86ee</color>
+    <color name="sudoku_colorAccent">#656565</color>
 
     <color name="item2start">#499ef1</color>
     <color name="item2end">#1c86ee</color>

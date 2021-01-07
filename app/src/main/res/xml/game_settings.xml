@@ -90,7 +90,7 @@
             android:summary="@string/show_hints_summary"
             android:title="@string/show_hints" />
         <org.return_result.sudoku.gui.SudokuBoardThemePreference
-            android:defaultValue="opensudoku"
+            android:defaultValue="sudoku"
             android:dialogTitle="@string/select_theme"
             android:entries="@array/theme_names"
             android:entryValues="@array/theme_codes"
@@ -107,19 +107,19 @@
                 android:title="@string/is_light_theme_title" />
             <net.margaritov.preference.colorpicker.ColorPickerPreference
                 alphaSlider="true"
-                android:defaultValue="@color/opensudoku_colorPrimary"
+                android:defaultValue="@color/sudoku_colorPrimary"
                 android:key="custom_theme_colorPrimary"
                 android:summary="@string/app_color_primary_summary"
                 android:title="@string/app_color_primary_title" />
             <net.margaritov.preference.colorpicker.ColorPickerPreference
                 alphaSlider="true"
-                android:defaultValue="@color/opensudoku_colorPrimaryDark"
+                android:defaultValue="@color/sudoku_colorPrimaryDark"
                 android:key="custom_theme_colorPrimaryDark"
                 android:summary="@string/app_color_secondary_summary"
                 android:title="@string/app_color_secondary_title" />
             <net.margaritov.preference.colorpicker.ColorPickerPreference
                 alphaSlider="true"
-                android:defaultValue="@color/opensudoku_colorAccent"
+                android:defaultValue="@color/sudoku_colorAccent"
                 android:key="custom_theme_colorAccent"
                 android:summary="@string/app_color_accent_summary"
                 android:title="@string/app_color_accent_title" />

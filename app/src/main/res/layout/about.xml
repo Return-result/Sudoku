@@ -12,7 +12,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:background="@drawable/sudokutwo"
-        ></ImageView>
+        android:contentDescription="@string/app_name" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         android:textStyle="bold"
         android:textColor="#ffffff"
         android:layout_gravity="center"
-        android:text="Sudoku Puzzle Game Developed By:"></TextView>
+        android:text="@string/sudoku_puzzle_game_developed_by"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,6 +32,6 @@
         android:textStyle="bold"
         android:textColor="#ffffff"
         android:layout_gravity="center"
-        android:text="Return Result Org."></TextView>
+        android:text="@string/return_result_org"/>
 
 </LinearLayout>
