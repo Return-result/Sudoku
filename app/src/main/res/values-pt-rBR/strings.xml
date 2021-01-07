@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Sudoku</string>
+    <string name="app_name">Sudoku Puzzles</string>
     <string name="edit_sudoku">Editar Sudoku</string>
     <string name="puzzle_folders">Pastas de jogos OpenSudoku</string>
     <string name="version">Versão %s</string>
@@ -93,13 +93,13 @@
 	</string>
     <string name="im_single_number_hint">Você está agora no modo de entrada
 		<i>Número Simples</i>. Pressione um botão numérico e escolha qualquer célula para preencher com o número selecionado.\n\n
-		Pressione o botão com um 
+		Pressione o botão com um
 		<i>Lápis</i>
 		para editar a observação da célula.\n
 	</string>
     <string name="im_numpad_hint">Você está agora no modo de entrada
 		<i>Teclado</i>. Os botões agem como um teclado numérico padrão.\n\n
-		Pressione o botão com um 
+		Pressione o botão com um
 		<i>Lápis</i>
 		para editar a observação da célula.\n
 	</string>
@@ -110,7 +110,7 @@
     <string name="help_text"><b>Controle de teclado</b>\n\nUse o trackball para navegar para a célula desejada e
 		pressione o número no teclado para preencher com o valor. Para editar a observação da célula, pressione o
 		número com ALT ou SHIFT.\n\n<b>
-			Modos de entrada</b>\n\nVocê pode alternar entre os modos de entrada usando o botão no canto inferior 
+			Modos de entrada</b>\n\nVocê pode alternar entre os modos de entrada usando o botão no canto inferior
 		direito da tela. Você pode também desabilitar qualquer modo de entrada nas configurações do jogo - isso irá
 		escondê-los totalmente.\n\n
 		<b>Modo de entrada Popup</b>\n\nUma janela popup é mostrada ao pressionar uma célula. Você pode editar o valor

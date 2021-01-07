@@ -14,12 +14,20 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import org.return_result.sudoku.R;
 import org.return_result.sudoku.db.SudokuDatabase;
 import org.return_result.sudoku.game.SudokuGame;
 import org.return_result.sudoku.utils.AndroidUtils;
 
 public class TitleScreenActivity extends ThemedActivity {
+
+    private AdView mAdView;
 
     private final int MENU_ITEM_SETTINGS = 0;
     private final int MENU_ITEM_ABOUT = 1;
@@ -30,6 +38,18 @@ public class TitleScreenActivity extends ThemedActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_title_screen);
+
+        //LOAD BANNER AD
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         mResumeButton = findViewById(R.id.resume_button);
         Button mSudokuListButton = findViewById(R.id.sudoku_lists_button);
@@ -115,9 +135,9 @@ public class TitleScreenActivity extends ThemedActivity {
 
         if (id == DIALOG_ABOUT) {
             final View aboutView = factory.inflate(R.layout.about, null);
-            TextView versionLabel = aboutView.findViewById(R.id.version_label);
+//            TextView versionLabel = aboutView.findViewById(R.id.version_label);
             String versionName = AndroidUtils.getAppVersionName(getApplicationContext());
-            versionLabel.setText(getString(R.string.version, versionName));
+//            versionLabel.setText(getString(R.string.version, versionName));
             return new AlertDialog.Builder(this)
                     .setIcon(R.mipmap.ic_launcher)
                     .setTitle(R.string.app_name)

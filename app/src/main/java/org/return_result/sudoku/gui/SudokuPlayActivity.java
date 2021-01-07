@@ -38,6 +38,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import org.return_result.sudoku.R;
 import org.return_result.sudoku.db.SudokuDatabase;
 import org.return_result.sudoku.game.Cell;
@@ -53,6 +59,8 @@ import org.return_result.sudoku.utils.ThemeUtils;
 public class SudokuPlayActivity extends ThemedActivity {
 
     public static final String EXTRA_SUDOKU_ID = "sudoku_id";
+
+    private AdView adViewPlay;
 
     public static final int MENU_ITEM_RESTART = Menu.FIRST;
     public static final int MENU_ITEM_CLEAR_ALL_NOTES = Menu.FIRST + 1;
@@ -159,6 +167,18 @@ public class SudokuPlayActivity extends ThemedActivity {
         }
 
         setContentView(R.layout.sudoku_play);
+
+
+        //LOAD BANNER AD
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        adViewPlay = findViewById(R.id.adViewPlay);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adViewPlay.loadAd(adRequest);
 
         mRootLayout = findViewById(R.id.root_layout);
         mSudokuBoard = findViewById(R.id.sudoku_board);

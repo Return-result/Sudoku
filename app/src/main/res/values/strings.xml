@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Sudoku</string>
+    <string name="app_name">Sudoku Puzzles</string>
     <string name="edit_sudoku">Edit sudoku</string>
 
-    <string name="puzzle_folders">OpenSudoku puzzle folders</string>
+    <string name="puzzle_folders">Sudoku Puzzles folders</string>
 
     <string name="version">Version %s</string>
     <string name="homepage" translatable="false">https://opensudoku.moire.org/</string>
@@ -357,8 +357,8 @@
     <string name="highlight_similar_notes">Highlight similar notes</string>
     <string name="highlight_similar_notes_summary">Highlight cells with similar note values</string>
 
-    <string name="resume">Resume</string>
-    <string name="sudoku_lists">Sudoku Lists</string>
+    <string name="resume">Continue Playing</string>
+    <string name="sudoku_lists">List of Games</string>
 
     <!-- Strings added/changed in 3.1.0 -->
     <string name="undo_to_before_mistake">Undo to before mistake</string>

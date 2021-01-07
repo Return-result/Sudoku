@@ -47,6 +47,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import org.return_result.sudoku.R;
 import org.return_result.sudoku.db.FolderColumns;
 import org.return_result.sudoku.db.SudokuDatabase;
@@ -89,12 +95,25 @@ public class FolderListActivity extends ThemedActivity {
     private long mRenameFolderID;
     private long mDeleteFolderID;
 
+    private AdView mAdView2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.folder_list);
         setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
+
+        //LOAD BANNER AD
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView2 = findViewById(R.id.adView2);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView2.loadAd(adRequest);
 
         View getMorePuzzles = findViewById(R.id.get_more_puzzles);
         getMorePuzzles.setOnClickListener(v -> {
@@ -222,9 +241,9 @@ public class FolderListActivity extends ThemedActivity {
         switch (id) {
             case DIALOG_ABOUT:
                 final View aboutView = factory.inflate(R.layout.about, null);
-                TextView versionLabel = aboutView.findViewById(R.id.version_label);
+//                TextView versionLabel = aboutView.findViewById(R.id.version_label);
                 String versionName = AndroidUtils.getAppVersionName(getApplicationContext());
-                versionLabel.setText(getString(R.string.version, versionName));
+//                versionLabel.setText(getString(R.string.version, versionName));
                 return new AlertDialog.Builder(this)
                         .setIcon(R.mipmap.ic_launcher)
                         .setTitle(R.string.app_name)

@@ -5,10 +5,16 @@
     <color name="coffee_colorPrimaryDark">@color/brown_100</color>
     <color name="coffee_colorAccent">@color/brown_600</color>
 
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
     <color name="opensudoku_colorPrimaryLight">#D1FDF9</color>
-    <color name="opensudoku_colorPrimary">#49B7AC</color>
-    <color name="opensudoku_colorPrimaryDark">#009587</color>
+    <color name="opensudoku_colorPrimary">#499ef1</color>
+    <color name="opensudoku_colorPrimaryDark">#1c86ee</color>
     <color name="opensudoku_colorAccent">#656565</color>
+
+    <color name="item2start">#499ef1</color>
+    <color name="item2end">#1c86ee</color>
 
     <color name="default_lineColor">#757575</color>
     <color name="default_sectorLineColor">#9e9e9e</color>
