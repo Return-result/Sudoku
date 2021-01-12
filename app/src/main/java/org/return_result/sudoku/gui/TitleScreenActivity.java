@@ -13,8 +13,10 @@ import android.widget.Button;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -30,6 +32,8 @@ public class TitleScreenActivity extends ThemedActivity {
     private final int MENU_ITEM_ABOUT = 1;
     private final int DIALOG_ABOUT = 0;
     private Button mResumeButton;
+
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,9 @@ public class TitleScreenActivity extends ThemedActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         mResumeButton = findViewById(R.id.resume_button);
         Button mSudokuListButton = findViewById(R.id.sudoku_lists_button);
@@ -88,9 +95,20 @@ public class TitleScreenActivity extends ThemedActivity {
         if (canResume(mSudokuGameID)) {
             mResumeButton.setVisibility(View.VISIBLE);
             mResumeButton.setOnClickListener((view) -> {
-                Intent intentToPlay = new Intent(TitleScreenActivity.this, SudokuPlayActivity.class);
-                intentToPlay.putExtra(SudokuPlayActivity.EXTRA_SUDOKU_ID, mSudokuGameID);
-                startActivity(intentToPlay);
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                    mInterstitialAd.setAdListener(new AdListener() {
+                        public void onAdClosed() {
+                            Intent intentToPlay = new Intent(TitleScreenActivity.this, SudokuPlayActivity.class);
+                            intentToPlay.putExtra(SudokuPlayActivity.EXTRA_SUDOKU_ID, mSudokuGameID);
+                            startActivity(intentToPlay);
+                        }
+                    });
+                } else {
+                    Intent intentToPlay = new Intent(TitleScreenActivity.this, SudokuPlayActivity.class);
+                    intentToPlay.putExtra(SudokuPlayActivity.EXTRA_SUDOKU_ID, mSudokuGameID);
+                    startActivity(intentToPlay);
+                }
             });
         } else {
             mResumeButton.setVisibility(View.GONE);

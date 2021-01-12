@@ -41,6 +41,11 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.SimpleCursorAdapter.ViewBinder;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
@@ -100,6 +105,7 @@ public class SudokuListActivity extends ThemedActivity {
     private SudokuListSorter mListSorter;
 
     private TextView mFilterStatus;
+    private InterstitialAd mInterstitialAd;
 
     private SimpleCursorAdapter mAdapter;
     private Cursor mCursor;
@@ -113,6 +119,12 @@ public class SudokuListActivity extends ThemedActivity {
 
         setContentView(R.layout.sudoku_list);
         mFilterStatus = findViewById(R.id.filter_status);
+
+        MobileAds.initialize(this);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
 
@@ -148,7 +160,23 @@ public class SudokuListActivity extends ThemedActivity {
 
         mListView = findViewById(android.R.id.list);
         mListView.setAdapter(mAdapter);
-        mListView.setOnItemClickListener((parent, view, position, id) -> playSudoku(id));
+//        mListView.setOnItemClickListener((parent, view, position, id) -> playSudoku(id));
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                    mInterstitialAd.setAdListener(new AdListener() {
+                        @Override
+                        public void onAdClosed() {
+                            playSudoku(id);
+                        }
+                    });
+                } else {
+                    playSudoku(id);
+                }
+            }
+        });
         registerForContextMenu(mListView);
     }
 

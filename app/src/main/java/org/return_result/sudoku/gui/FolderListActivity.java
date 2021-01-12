@@ -95,7 +95,7 @@ public class FolderListActivity extends ThemedActivity {
     private long mRenameFolderID;
     private long mDeleteFolderID;
 
-    private AdView mAdView2;
+    private AdView mAdView2, mAdView1, mAdView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,15 +112,21 @@ public class FolderListActivity extends ThemedActivity {
         });
 
         mAdView2 = findViewById(R.id.adView2);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView2.loadAd(adRequest);
+        mAdView1 = findViewById(R.id.adView);
+        mAdView3 = findViewById(R.id.ad);
 
-        View getMorePuzzles = findViewById(R.id.get_more_puzzles);
-        getMorePuzzles.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://opensudoku.moire.org/"));
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        mAdView2.loadAd(adRequest);
+        mAdView1.loadAd(adRequest);
+        mAdView3.loadAd(adRequest);
+
+//        View getMorePuzzles = findViewById(R.id.get_more_puzzles);
+//        getMorePuzzles.setOnClickListener(v -> {
+//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://opensudoku.moire.org/"));
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//        });
 
         mDatabase = new SudokuDatabase(getApplicationContext());
         mCursor = mDatabase.getFolderList();
