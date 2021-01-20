@@ -52,7 +52,7 @@ public class TitleScreenActivity extends ThemedActivity {
         mAdView.loadAd(adRequest);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-6120599717351425/2837373560");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         mResumeButton = findViewById(R.id.resume_button);

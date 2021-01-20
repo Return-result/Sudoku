@@ -60,8 +60,6 @@ public class SudokuPlayActivity extends ThemedActivity {
 
     public static final String EXTRA_SUDOKU_ID = "sudoku_id";
 
-    private AdView adViewPlay;
-
     public static final int MENU_ITEM_RESTART = Menu.FIRST;
     public static final int MENU_ITEM_CLEAR_ALL_NOTES = Menu.FIRST + 1;
     public static final int MENU_ITEM_FILL_IN_NOTES = Menu.FIRST + 2;
@@ -176,7 +174,7 @@ public class SudokuPlayActivity extends ThemedActivity {
             }
         });
 
-        adViewPlay = findViewById(R.id.adViewPlay);
+        AdView adViewPlay = findViewById(R.id.adViewPlay);
         AdRequest adRequest = new AdRequest.Builder().build();
         adViewPlay.loadAd(adRequest);
 

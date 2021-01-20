@@ -95,8 +95,6 @@ public class FolderListActivity extends ThemedActivity {
     private long mRenameFolderID;
     private long mDeleteFolderID;
 
-    private AdView mAdView2, mAdView1, mAdView3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,9 +109,9 @@ public class FolderListActivity extends ThemedActivity {
             }
         });
 
-        mAdView2 = findViewById(R.id.adView2);
-        mAdView1 = findViewById(R.id.adView);
-        mAdView3 = findViewById(R.id.ad);
+        AdView mAdView2 = findViewById(R.id.adView2);
+        AdView mAdView1 = findViewById(R.id.adView);
+        AdView mAdView3 = findViewById(R.id.ad);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
